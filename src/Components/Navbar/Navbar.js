@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo1 from '../../assets/images/logo/logo2.png'
+import { AuthContext } from '../../Contexts/AuthProvider';
 
 const Navbar = () => {
+    const { user } = useContext(AuthContext);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <div className="bg-gray-900">
@@ -67,6 +69,7 @@ const Navbar = () => {
                                 Toggle
                             </button>
                         </li>
+                        <li>{user}</li>
                         <li>
                             <Link
                                 to="/login"
