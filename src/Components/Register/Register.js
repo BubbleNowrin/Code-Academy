@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
 
 const Register = () => {
-    // const [error, setError] = useState('');
-    const { createUser } = useContext(AuthContext);
+    const [error, setError] = useState('');
+    const { createUser, user } = useContext(AuthContext);
 
     const handleOnSubmit = (event) => {
         event.preventDefault();
@@ -17,11 +17,11 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
                 form.reset();
-                // setError('');
+                console.log(user);
+                setError('');
             })
-            .catch(error => console.error(error))
+            .catch(error => setError(error.message))
     }
     return (
         <div className="mx-auto w-full max-w-md p-8 space-y-3 rounded-xl my-10 bg-gray-700 text-gray-100">
@@ -44,6 +44,7 @@ const Register = () => {
                     <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 text-black focus:dark:border-violet-400" required />
                 </div>
                 <button className="block w-full p-3 text-center rounded-sm text-white bg-orange-600 hover:bg-orange-500">Register</button>
+                <p className="text-xl text-center text-red-600">{error}</p>
             </form>
 
             <p className="text-xs text-center sm:px-6 dark:text-gray-400">Already have an account?

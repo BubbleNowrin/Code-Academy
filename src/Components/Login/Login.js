@@ -1,11 +1,11 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
 
 const Login = () => {
-
-    const { googleSignIn, githubSignIn, signIn } = useContext(AuthContext);
+    const [error, setError] = useState('');
+    const { googleSignIn, githubSignIn, signIn, user } = useContext(AuthContext);
 
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
@@ -37,11 +37,11 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
                 form.reset();
-                // setError('');
+                console.log(user);
+                setError('');
             })
-            .catch(error => console.error(error))
+            .catch(error => setError(error.message))
     }
     return (
         <div className="mx-auto w-full max-w-md p-8 space-y-3 rounded-xl my-10 bg-gray-700 text-gray-100">
@@ -56,6 +56,7 @@ const Login = () => {
                     <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 text-black focus:dark:border-violet-400" />
                 </div>
                 <button className="block w-full p-3 text-center rounded-sm text-white bg-orange-600 hover:bg-orange-500">Log in</button>
+                <p className="text-xl text-center text-red-600">{error}</p>
             </form>
             <div className="flex items-center pt-4 space-x-1">
                 <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
