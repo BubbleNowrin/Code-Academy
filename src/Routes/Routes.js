@@ -24,6 +24,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/courses',
+                loader: async () => { return fetch('https://assignment-code-academy-server.vercel.app/courses') },
                 element: <Courses></Courses>
             },
             {

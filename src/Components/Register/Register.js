@@ -4,7 +4,7 @@ import { AuthContext } from '../../Contexts/AuthProvider';
 
 const Register = () => {
     const [error, setError] = useState('');
-    const { createUser, user } = useContext(AuthContext);
+    const { createUser } = useContext(AuthContext);
 
     const handleOnSubmit = (event) => {
         event.preventDefault();
