@@ -56,7 +56,7 @@ const Navbar = () => {
                         title="Code Academy"
                         className="inline-flex items-center lg:mx-auto"
                     >
-                        <img className='w-8 h-8' src={Logo1} alt="" />
+                        <img className='w-8 h-8 rounded-full' src={Logo1} alt="" />
                         <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
                             Code Academy
                         </span>
