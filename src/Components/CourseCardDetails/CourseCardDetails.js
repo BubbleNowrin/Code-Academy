@@ -6,7 +6,7 @@ const CourseCardDetails = ({ course }) => {
     return (
 
         <Link to={`/details/${id}`}>
-            <div className="p-6 lg:mx-6 my-4 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50">
+            <div data-aos="zoom-in-up" data-aos-duration="1500" className="p-6 lg:mx-6 my-4 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50">
                 <img src={image} alt="" className="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
                 <div className="mt-6 mb-2">
                     <span className="block text-xs font-medium tracking-widest uppercase dark:text-violet-400">Enrolled:<span className='text-red-500'>{total_enrolled}</span></span>

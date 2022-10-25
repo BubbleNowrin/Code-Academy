@@ -130,7 +130,7 @@ const Navbar = () => {
                         }
 
                     </ul>
-                    <div className="ml-auto lg:hidden">
+                    <div className="ml-auto z-10 lg:hidden">
                         <button
                             aria-label="Open Menu"
                             title="Open Menu"

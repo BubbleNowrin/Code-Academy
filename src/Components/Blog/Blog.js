@@ -2,7 +2,8 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className="text-white my-10">
+        <div data-aos="fade-down-right"
+            className="text-white my-10">
             <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-red-500 mb-2">
                 <div className="flex items-center justify-between">
                     <span className="text-sm dark:text-gray-400">Jun 10, 2020</span>
