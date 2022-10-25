@@ -11,6 +11,7 @@ import Login from "../Components/Login/Login";
 import Register from "../Components/Register/Register";
 import Sidebar from "../Components/Sidebar/Sidebar";
 import Main from "../Layout/Main";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const routes = createBrowserRouter([
     {
@@ -49,7 +50,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/checkout/:id',
                 loader: async ({ params }) => { return fetch(`https://assignment-code-academy-server.vercel.app/courses/${params.id}`) },
-                element: <Checkout></Checkout>
+                element: <PrivateRoutes><Checkout></Checkout></PrivateRoutes>
             },
             {
                 path: '/faq',

@@ -8,18 +8,19 @@ const Courses = () => {
     console.log(courses);
     return (
         <div className='lg:flex'>
-
-            <div className='grid lg:grid-cols-3 mx-auto my-10 gap-4'>
-                {
-                    courses.map(course => <CourseCardDetails key={course.id} course={course}></CourseCardDetails>)
-                }
-            </div>
             <div className=''>
                 {
                     courses.map(course => <Sidebar key={course.id} course={course}></Sidebar>)
                 }
 
             </div>
+
+            <div className='grid lg:grid-cols-3 sm:grid-cols-1 mx-auto my-6'>
+                {
+                    courses.map(course => <CourseCardDetails key={course.id} course={course}></CourseCardDetails>)
+                }
+            </div>
+
         </div>
     );
 };

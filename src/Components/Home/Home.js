@@ -28,9 +28,9 @@ const Home = () => {
                     <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
                         Learn to
                         <br className="hidden md:block" />
-                        Code & Join{' '}
+                        Code & Build{' '}
                         <span className="inline-block text-deep-purple-accent-400">
-                            Your Tribe
+                            Your Career
                         </span>
                     </h2>
                     <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
