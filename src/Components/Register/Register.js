@@ -4,7 +4,7 @@ import { AuthContext } from '../../Contexts/AuthProvider';
 
 const Register = () => {
     const [error, setError] = useState('');
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
 
     const handleOnSubmit = (event) => {
         event.preventDefault();
@@ -13,15 +13,27 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const photoURL = form.photoURL.value;
-        console.log(name, email, password, photoURL);
+        // console.log(name, email, password, photoURL);
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                form.reset();
                 console.log(user);
                 setError('');
+                form.reset();
+                handleUpdateUserProfile(name, photoURL);
             })
             .catch(error => setError(error.message))
+    }
+
+    const handleUpdateUserProfile = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+        };
+        updateUserProfile(profile)
+            .then(() => { })
+            .catch(e => console.error(e.message))
+
     }
     return (
         <div className="mx-auto w-full max-w-md p-8 space-y-3 rounded-xl my-10 bg-gray-700 text-gray-100">
@@ -33,7 +45,7 @@ const Register = () => {
                 </div>
                 <div className="space-y-1 text-sm">
                     <label htmlFor="photoURL" className="block dark:text-gray-400">PhotoURL</label>
-                    <input type="photoURL" name="photoURL" id="photoURL" placeholder="PhotoURL" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 text-black focus:dark:border-violet-400" />
+                    <input type="photoURL" name="photoURL" id="photoURL" placeholder="PhotoURL" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 text-black focus:dark:border-violet-400" required />
                 </div>
                 <div className="space-y-1 text-sm">
                     <label htmlFor="email" className="block dark:text-gray-400">Email</label>

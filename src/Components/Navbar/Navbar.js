@@ -78,10 +78,10 @@ const Navbar = () => {
                         </li>
                         {currentUser ?
                             <>
-                                {currentUser.photoURL ?
-                                    <img title={currentUser.displayName ? currentUser.displayName : 'No Name provided'} style={{ height: '30px' }} className='rounded-full' src={currentUser.photoURL} alt="" />
+                                {currentUser?.photoURL ?
+                                    <img title={currentUser?.displayName ? currentUser?.displayName : 'No Name provided'} style={{ height: '30px' }} className='rounded-full' src={currentUser?.photoURL} alt="" />
                                     :
-                                    <FaUserAlt title={currentUser.displayName ? currentUser.displayName : 'No Name provided'} />
+                                    <FaUserAlt title={currentUser?.displayName ? currentUser?.displayName : 'No Name provided'} />
                                 }
                                 <button onClick={handleLogOut} className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">Logout</button>
                             </>
