@@ -43,12 +43,12 @@ const Register = () => {
                     <label htmlFor="password" className="block dark:text-gray-400">Password</label>
                     <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 text-black focus:dark:border-violet-400" required />
                 </div>
-                <button className="block w-full p-3 text-center rounded-sm text-white bg-orange-600 hover:bg-orange-500">Register</button>
+                <button className="block w-full p-3 text-center rounded-sm text-white bg-red-500 hover:bg-red-600">Register</button>
                 <p className="text-xl text-center text-red-600">{error}</p>
             </form>
 
             <p className="text-xs text-center sm:px-6 dark:text-gray-400">Already have an account?
-                <Link rel="noopener noreferrer" to='/login' className="underline dark:text-gray-100">Log in</Link>
+                <Link to='/login' className="underline dark:text-gray-100">Log in</Link>
             </p>
         </div>
     );

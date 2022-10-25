@@ -60,7 +60,7 @@ const Login = () => {
                     <label htmlFor="password" className="block dark:text-gray-400">Password</label>
                     <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 text-black focus:dark:border-violet-400" />
                 </div>
-                <button className="block w-full p-3 text-center rounded-sm text-white bg-orange-600 hover:bg-orange-500">Log in</button>
+                <button className="block w-full p-3 text-center rounded-sm text-white bg-red-500 hover:bg-red-600">Log in</button>
                 <p className="text-xl text-center text-red-600">{error}</p>
             </form>
             <div className="flex items-center pt-4 space-x-1">

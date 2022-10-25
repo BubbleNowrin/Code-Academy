@@ -79,9 +79,9 @@ const Navbar = () => {
                         {currentUser ?
                             <>
                                 {currentUser.photoURL ?
-                                    <img title={currentUser.displayName} style={{ height: '30px' }} className='rounded-full' src={currentUser.photoURL} alt="" />
+                                    <img title={currentUser.displayName ? currentUser.displayName : 'No Name provided'} style={{ height: '30px' }} className='rounded-full' src={currentUser.photoURL} alt="" />
                                     :
-                                    <FaUserAlt />
+                                    <FaUserAlt title={currentUser.displayName ? currentUser.displayName : 'No Name provided'} />
                                 }
                                 <button onClick={handleLogOut} className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">Logout</button>
                             </>
@@ -221,7 +221,7 @@ const Navbar = () => {
                                             <li>
                                                 <Link
                                                     to="/register"
-                                                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-gray-700 transition duration-200 rounded shadow-md bg-red-500 hover:bg-red-600 focus:shadow-outline focus:outline-none"
                                                     aria-label="Sign up"
                                                     title="Register"
                                                 >
