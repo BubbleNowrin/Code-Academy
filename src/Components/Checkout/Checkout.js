@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Checkout = () => {
 
+    const notify = () => toast.success("Successfully Enrolled!", { autoclose: 5000 });
     const course = useLoaderData();
-    const { name } = course;
+    const { name, price } = course;
     return (
         <div className=" px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
@@ -49,7 +52,7 @@ const Checkout = () => {
                     <div className="text-center">
                         <div className="text-lg font-semibold">{name}</div>
                         <div className="flex items-center justify-center mt-2">
-                            <div className="mr-1 text-5xl font-bold  text-red-500">$78</div>
+                            <div className="mr-1 text-5xl font-bold  text-red-500">{price}</div>
                             <div className="text-gray-700"></div>
                         </div>
                         <div className="mt-2 space-y-3">
@@ -59,11 +62,15 @@ const Checkout = () => {
                         </div>
                     </div>
                     <div>
-                        <Link
-                            to="/"
+                        <button onClick={notify}
                             className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-red-500 rounded shadow-md hover:bg-red-600 focus:shadow-outline focus:outline-none"
                         >
                             Enroll
+                        </button>
+                        <Link to='/courses'
+                            className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-red-500 rounded shadow-md hover:bg-red-600 focus:shadow-outline focus:outline-none"
+                        >
+                            Back To Courses
                         </Link>
 
                     </div>

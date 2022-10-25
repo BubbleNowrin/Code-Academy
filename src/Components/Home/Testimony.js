@@ -12,7 +12,7 @@ const Testimony = () => {
                     <div className="p-6 xl:col-span-3">
                         <div className="grid gap-4 md:grid-cols-2">
                             <div className="grid content-center gap-4">
-                                <div className="p-6 rounded shadow-md bg-gray-900">
+                                <div className="p-6 rounded shadow-md bg-gray-600">
                                     <p>For a total beginner in coding, this course was the perfect start! It was easy to understand, and easy to program (coding wit already?) Thank you so much for offering such a wonderful way to learn!</p>
                                     <div className="flex items-center mt-4 space-x-4">
                                         <img src="https://source.unsplash.com/50x50/?portrait?1" alt="" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
@@ -22,7 +22,7 @@ const Testimony = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="p-6 rounded shadow-md bg-gray-900">
+                                <div className="p-6 rounded shadow-md bg-gray-700">
                                     <p>The course is what the name says it is, an introduction to programming, great course for any code beginner. Lecturer is doing amazing job and keeping the lectures interesting, easy and understandable</p>
                                     <div className="flex items-center mt-4 space-x-4">
                                         <img src="https://source.unsplash.com/50x50/?portrait?2" alt="" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
@@ -34,7 +34,7 @@ const Testimony = () => {
                                 </div>
                             </div>
                             <div className="grid content-center gap-4">
-                                <div className="p-6 rounded shadow-md bg-gray-900">
+                                <div className="p-6 rounded shadow-md bg-gray-800">
                                     <p> I do not think the skills taught here allow you to do make anything practical, but it does let give you a bit of a taste about programming and teaches you very basic programming logic. But like I said, I just don't think Scratch is an appropriate tool and I think it should remain a coding tool for kids. I believe others are better off with an introductory course on something like Python instead, which isn't that hard either.</p>
                                     <div className="flex items-center mt-4 space-x-4">
                                         <img src="https://source.unsplash.com/50x50/?portrait?3" alt="" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />

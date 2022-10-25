@@ -85,7 +85,7 @@ const Navbar = () => {
                                     :
                                     <FaUserAlt title={currentUser?.displayName ? currentUser?.displayName : 'No Name provided'} />
                                 }
-                                <button onClick={handleLogOut} className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">Logout</button>
+                                <button onClick={handleLogOut} className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-red-500 hover:bg-red-600 focus:shadow-outline focus:outline-none">Logout</button>
                             </>
                             :
                             <>

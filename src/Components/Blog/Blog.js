@@ -3,7 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className="text-white my-10">
-            <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-gray-600 mb-2">
+            <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-red-500 mb-2">
                 <div className="flex items-center justify-between">
                     <span className="text-sm dark:text-gray-400">Jun 10, 2020</span>
                 </div>
@@ -12,7 +12,7 @@ const Blog = () => {
                     <p className="mt-2">Cross-origin resource sharing is a mechanism that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served. A web page may freely embed cross-origin images, stylesheets, scripts, iframes, and videos.</p>
                 </div>
             </div>
-            <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-gray-700 mb-2">
+            <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-gray-500 mb-2">
                 <div className="flex items-center justify-between">
                     <span className="text-sm dark:text-gray-400">August 23, 2021</span>
                 </div>
@@ -27,7 +27,7 @@ const Blog = () => {
                         7.Next steps.</p>
                 </div>
             </div>
-            <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-gray-800 mb-2">
+            <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-red-500 mb-2">
                 <div className="flex items-center justify-between">
                     <span className="text-sm dark:text-gray-400">October 14, 2021</span>
                 </div>
@@ -36,7 +36,7 @@ const Blog = () => {
                     <p className="mt-2">The react private route component renders child components ( children ) if the user is logged in. If not logged in the user is redirected to the /login page with the return url passed in the location state property.</p>
                 </div>
             </div>
-            <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-gray-900 mb-2">
+            <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-gray-500 mb-2">
                 <div className="flex items-center justify-between">
                     <span className="text-sm dark:text-gray-400">July 18, 2022</span>
                 </div>

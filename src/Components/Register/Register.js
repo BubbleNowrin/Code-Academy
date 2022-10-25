@@ -1,10 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
     const [error, setError] = useState('');
     const { createUser, updateUserProfile } = useContext(AuthContext);
+
 
     const handleOnSubmit = (event) => {
         event.preventDefault();
@@ -13,11 +16,13 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const photoURL = form.photoURL.value;
-        // console.log(name, email, password, photoURL);
+
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                if (user) {
+                    showToast();
+                }
                 setError('');
                 form.reset();
                 handleUpdateUserProfile(name, photoURL);
@@ -26,6 +31,10 @@ const Register = () => {
                 console.error(error);
                 setError(error.message);
             })
+    }
+
+    const showToast = () => {
+        toast.success("Successfully Registered!", { autoclose: 5000 });
     }
 
     const handleUpdateUserProfile = (name, photoURL) => {
@@ -38,6 +47,7 @@ const Register = () => {
             .catch(e => console.error(e.message))
 
     }
+
     return (
         <div className="mx-auto w-full max-w-md p-8 space-y-3 rounded-xl my-10 bg-gray-700 text-gray-100">
             <h1 className="text-2xl font-bold text-center">Register</h1>

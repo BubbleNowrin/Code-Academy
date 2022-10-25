@@ -2,6 +2,8 @@ import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [error, setError] = useState('');
@@ -20,6 +22,9 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                if (user) {
+                    showToast();
+                }
                 navigate(from, { replace: true });
             })
             .catch(error => console.error(error))
@@ -30,6 +35,9 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                if (user) {
+                    showToast();
+                }
                 navigate(from, { replace: true });
             })
             .catch(error => console.error(error))
@@ -46,6 +54,9 @@ const Login = () => {
                 const user = result.user;
                 form.reset();
                 console.log(user);
+                if (user) {
+                    showToast();
+                }
                 setError('');
                 navigate(from, { replace: true });
             })
@@ -53,6 +64,9 @@ const Login = () => {
                 console.error(error);
                 setError(error.message);
             })
+    }
+    const showToast = () => {
+        toast.success("Successfully Logged In!", { autoclose: 5000 });
     }
     return (
         <div className="mx-auto w-full max-w-md p-8 space-y-3 rounded-xl my-10 bg-gray-700 text-gray-100">

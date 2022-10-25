@@ -12,7 +12,7 @@ const CourseCardDetails = ({ course }) => {
                     <span className="block text-xs font-medium tracking-widest uppercase dark:text-violet-400">Enrolled:<span className='text-red-500'>{total_enrolled}</span></span>
                     <h2 className="text-xl font-semibold tracking-wide text-red-500">{name}</h2>
                 </div>
-                <p className="dark:text-gray-100">{details.length > 100 ? details.slice(0, 100) + "..." : details}<Link className='underline text-blue-900' to={`/details/${id}`}>Learn More</Link></p>
+                <p className="dark:text-gray-100">{details.length > 200 ? details.slice(0, 200) + "..." : details}<Link className='underline text-blue-900' to={`/details/${id}`}>Learn More</Link></p>
             </div>
         </Link>
 
