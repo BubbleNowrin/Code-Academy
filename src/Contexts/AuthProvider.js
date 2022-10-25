@@ -7,6 +7,7 @@ const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
 
+    const [theme, setTheme] = useState('light');
     const [currentUser, setCurrentUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -57,7 +58,9 @@ const AuthProvider = ({ children }) => {
         signIn,
         logOut,
         updateUserProfile,
-        loading
+        loading,
+        theme,
+        setTheme
     };
     return (
         <AuthContext.Provider value={authInfo}>
