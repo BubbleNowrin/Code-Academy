@@ -22,7 +22,10 @@ const Register = () => {
                 form.reset();
                 handleUpdateUserProfile(name, photoURL);
             })
-            .catch(error => setError(error.message))
+            .catch(error => {
+                console.error(error);
+                setError(error.message);
+            })
     }
 
     const handleUpdateUserProfile = (name, photoURL) => {

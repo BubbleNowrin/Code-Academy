@@ -46,7 +46,10 @@ const Login = () => {
                 setError('');
                 navigate('/');
             })
-            .catch(error => setError(error.message))
+            .catch(error => {
+                console.error(error);
+                setError(error.message);
+            })
     }
     return (
         <div className="mx-auto w-full max-w-md p-8 space-y-3 rounded-xl my-10 bg-gray-700 text-gray-100">
