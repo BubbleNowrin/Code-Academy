@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Blog from "../Components/Blog/Blog";
 import CourseCardDetails from "../Components/CourseCardDetails/CourseCardDetails";
 import Courses from "../Components/Courses/Courses";
+import Details from "../Components/Details/Details";
 import Errorpage from "../Components/ErrorPage/Errorpage";
 import FAQ from "../Components/FAQ/FAQ";
 import Home from "../Components/Home/Home";
@@ -28,6 +29,16 @@ export const routes = createBrowserRouter([
                 path: '/courses',
                 loader: async () => { return fetch('https://assignment-code-academy-server.vercel.app/courses') },
                 element: <Courses></Courses>
+            },
+            {
+                path: '/details',
+                loader: async () => { return fetch(`https://assignment-code-academy-server.vercel.app/courses`) },
+                element: <Details></Details>
+            },
+            {
+                path: '/details/:id',
+                loader: async ({ params }) => { return fetch(`https://assignment-code-academy-server.vercel.app/courses/${params.id}`) },
+                element: <Details></Details>
             },
             {
                 path: '/details/:id',
