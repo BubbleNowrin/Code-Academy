@@ -9,12 +9,10 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleThemeDark = () => {
-        console.log('working');
         setTheme('retro');
     }
 
     const handleThemeLight = () => {
-        console.log('working');
         setTheme('light');
     }
 

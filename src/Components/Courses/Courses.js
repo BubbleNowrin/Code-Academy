@@ -6,7 +6,7 @@ import CourseCardDetails from '../CourseCardDetails/CourseCardDetails';
 
 const Courses = () => {
     const courses = useLoaderData();
-    // console.log(courses);
+
     return (
         <div className='lg:flex'>
             <aside className="w-full lg:w-1/5 lg:p-6 sm:w-60 lg:bg-gray-200 text-gray-100">
