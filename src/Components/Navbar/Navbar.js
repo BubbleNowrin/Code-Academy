@@ -72,7 +72,7 @@ const Navbar = () => {
                     </Link>
                     <ul className="flex items-center hidden ml-auto space-x-8 lg:flex">
                         <li>
-                            <label for="Toggle4" className="inline-flex items-center p-1 cursor-pointer bg-gray-300 text-gray-800">
+                            <label htmlFor="Toggle4" className="inline-flex items-center p-1 cursor-pointer bg-gray-300 text-gray-800">
                                 <input id="Toggle4" type="checkbox" className="hidden peer" />
                                 <span className="px-4 py-2 bg-gray-600 peer-checked:bg-gray-300">Dark</span>
                                 <span className="px-4 py-2 bg-gray-300 peer-checked:bg-white">Light</span>
