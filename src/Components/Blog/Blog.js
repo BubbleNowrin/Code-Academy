@@ -6,7 +6,7 @@ const Blog = () => {
             className="text-white my-10">
             <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-red-500 mb-2">
                 <div className="flex items-center justify-between">
-                    <span className="text-sm dark:text-gray-400">Jun 10, 2020</span>
+                    <span className="text-sm text-white">Jun 10, 2020</span>
                 </div>
                 <div className="mt-3">
                     <p className="text-2xl font-bold underline">What is CORS?</p>
@@ -15,7 +15,7 @@ const Blog = () => {
             </div>
             <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-gray-500 mb-2">
                 <div className="flex items-center justify-between">
-                    <span className="text-sm dark:text-gray-400">August 23, 2021</span>
+                    <span className="text-sm text-white">August 23, 2021</span>
                 </div>
                 <div className="mt-3">
                     <p className="text-2xl font-bold underline">Why are you using firebase? What other options do you have to implement authentication?</p>
@@ -30,7 +30,7 @@ const Blog = () => {
             </div>
             <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-red-500 mb-2">
                 <div className="flex items-center justify-between">
-                    <span className="text-sm dark:text-gray-400">October 14, 2021</span>
+                    <span className="text-sm text-white">October 14, 2021</span>
                 </div>
                 <div className="mt-3">
                     <p className="text-2xl font-bold underline">How does the private route work?</p>
@@ -39,7 +39,7 @@ const Blog = () => {
             </div>
             <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-gray-500 mb-2">
                 <div className="flex items-center justify-between">
-                    <span className="text-sm dark:text-gray-400">July 18, 2022</span>
+                    <span className="text-sm text-white">July 18, 2022</span>
                 </div>
                 <div className="mt-3">
                     <p className="text-2xl font-bold underline">What is Node? How does Node work?</p>

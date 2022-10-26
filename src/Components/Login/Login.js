@@ -73,20 +73,20 @@ const Login = () => {
             <h1 className="text-2xl font-bold text-center">Login</h1>
             <form onSubmit={handleOnSubmit} action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
                 <div className="space-y-1 text-sm">
-                    <label htmlFor="email" className="block dark:text-gray-400">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 text-black focus:dark:border-violet-400" required />
+                    <label htmlFor="email" className="block">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md text-black " required />
                 </div>
                 <div className="space-y-1 text-sm">
-                    <label htmlFor="password" className="block dark:text-gray-400">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 text-black focus:dark:border-violet-400" required />
+                    <label htmlFor="password" className="block ">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md   text-black" required />
                 </div>
                 <button className="block w-full p-3 text-center rounded-sm text-white bg-red-500 hover:bg-red-600">Log in</button>
                 <p className="text-xl text-center text-red-600">{error}</p>
             </form>
             <div className="flex items-center pt-4 space-x-1">
-                <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
-                <p className="px-3 text-sm dark:text-gray-400">Login with social accounts</p>
-                <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
+                <div className="flex-1 h-px sm:w-16 "></div>
+                <p className="px-3 text-sm ">Login with social accounts</p>
+                <div className="flex-1 h-px sm:w-16 "></div>
             </div>
             <div className="flex justify-center space-x-4">
                 <button onClick={handleGoogleSignIn} aria-label="Log in with Google" className="p-3 rounded-sm">
@@ -101,8 +101,8 @@ const Login = () => {
                     </svg>
                 </button>
             </div>
-            <p className="text-xs text-center sm:px-6 dark:text-gray-400">Don't have an account?
-                <Link rel="noopener noreferrer" to='/register' className="underline dark:text-gray-100">Register</Link>
+            <p className="text-xs text-center sm:px-6 ">Don't have an account?
+                <Link to='/register' className="underline ">Register</Link>
             </p>
         </div>
     );

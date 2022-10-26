@@ -226,16 +226,7 @@ const Navbar = () => {
                                                     Blog
                                                 </Link>
                                             </li>
-                                            <li>
-                                                <Link
-                                                    to="/login"
-                                                    aria-label="Sign in"
-                                                    title="Log in"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                                >
-                                                    Log in
-                                                </Link>
-                                            </li>
+
                                             <li>
                                                 <label className="swap swap-rotate">
                                                     <input type="checkbox" />
@@ -247,16 +238,41 @@ const Navbar = () => {
                                                 </label>
 
                                             </li>
-                                            <li>
-                                                <Link
-                                                    to="/register"
-                                                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-gray-700 transition duration-200 rounded shadow-md bg-red-500 hover:bg-red-600 focus:shadow-outline focus:outline-none"
-                                                    aria-label="Sign up"
-                                                    title="Register"
-                                                >
-                                                    Register
-                                                </Link>
-                                            </li>
+                                            {currentUser ?
+                                                <>
+                                                    {currentUser?.photoURL ?
+                                                        <img title={currentUser?.displayName ? currentUser?.displayName : 'No Name provided'} style={{ height: '30px' }} className='rounded-full' src={currentUser?.photoURL} alt="" />
+                                                        :
+                                                        <FaUserAlt title={currentUser?.displayName ? currentUser?.displayName : 'No Name provided'} />
+                                                    }
+                                                    <button onClick={handleLogOut} className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-red-500 hover:bg-red-600 focus:shadow-outline focus:outline-none">Logout</button>
+                                                </>
+                                                :
+                                                <>
+                                                    <li>
+                                                        <Link
+                                                            to="/login"
+                                                            aria-label="Sign in"
+                                                            title="Log in"
+                                                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                        >
+                                                            Log in
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            to="/register"
+                                                            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-gray-700 transition duration-200 rounded shadow-md bg-red-500 hover:bg-red-600 focus:shadow-outline focus:outline-none"
+                                                            aria-label="Sign up"
+                                                            title="Register"
+                                                        >
+                                                            Register
+                                                        </Link>
+                                                    </li>
+                                                </>
+                                            }
+
+
                                         </ul>
                                     </nav>
                                 </div>
