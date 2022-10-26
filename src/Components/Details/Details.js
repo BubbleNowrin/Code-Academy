@@ -13,7 +13,7 @@ const Details = () => {
     return (
         <div>
 
-            <h2 className="flex justify-center text-3xl mt-10 font-semibold  text-red-500 ml-4 mr-4">Everything you need to know about '{name}'</h2><Pdf targetRef={ref} filename="Course-details.pdf">
+            <h2 className="flex justify-center text-3xl mt-10 font-semibold text-red-500  ml-4 mr-4">Everything you need to know about: '{name}'</h2><Pdf targetRef={ref} filename="Course-details.pdf">
                 {({ toPdf }) => <button onClick={toPdf} className="flex items-center mx-auto block p-3 text-center rounded-xl text-white bg-red-500 hover:bg-red-600">Download<GrDocumentPdf /></button>}
             </Pdf>
             <p className="flex justify-center text-sm mt-10 font-semibold mb-4 text-gray-500 lg:px-24 ml-4 mr-4">{details}</p>
