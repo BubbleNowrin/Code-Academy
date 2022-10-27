@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Logo1 from '../../assets/images/logo/logo2.png'
 import { AuthContext } from '../../Contexts/AuthProvider';
 import { FaUserAlt } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
     const { currentUser, logOut, setTheme } = useContext(AuthContext);
@@ -18,9 +20,16 @@ const Navbar = () => {
 
     const handleLogOut = () => {
         logOut()
-            .then(() => { })
+            .then(() => {
+                showToast();
+            })
             .catch(e => console.error(e))
     }
+
+    const showToast = () => {
+        toast.success("Successfully logged out!", { autoclose: 5000 });
+    }
+
     return (
         <div className="bg-gray-900">
             <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">

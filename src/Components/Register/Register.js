@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -7,6 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const Register = () => {
     const [error, setError] = useState('');
     const { createUser, updateUserProfile } = useContext(AuthContext);
+
+    const navigate = useNavigate();
 
 
     const handleOnSubmit = (event) => {
@@ -26,6 +28,7 @@ const Register = () => {
                 setError('');
                 form.reset();
                 handleUpdateUserProfile(name, photoURL);
+                navigate('/login');
             })
             .catch(error => {
                 console.error(error);
@@ -34,7 +37,7 @@ const Register = () => {
     }
 
     const showToast = () => {
-        toast.success("Successfully Registered!", { autoclose: 5000 });
+        toast.success("Successfully Registered! Please log in", { autoclose: 5000 });
     }
 
     const handleUpdateUserProfile = (name, photoURL) => {
